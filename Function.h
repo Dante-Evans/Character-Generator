@@ -2,6 +2,7 @@
 #include <iostream>
 #include <string>
 #include <vector>
+#include <cmath>
 
 struct charStats { //creating a structure for the stats to be stored
 	std::string statName; //creating the structure values
@@ -9,3 +10,4 @@ struct charStats { //creating a structure for the stats to be stored
 };
 
 void playerStats(std::vector<charStats> &arr, int n);
+void alterPlayerStats(int *ptrNum, int *ptrRace, int *ptrStat);

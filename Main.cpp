@@ -52,12 +52,67 @@ int main()
 	}
 	cin >> pRace;
 	cout << "You chose to be an " << pRace << "\n\n";
-	cout << "Your stats are now:\n\n";
-	playerStats(playStats, 7);
-	for (int i = 0; i < 7; i++)
+
+	if (pRace == "Human")
 	{
-		cout << playStats[i].statName << " " << playStats[i].statValue << "\n";
+		int racialBonus = 3;
+		int racialBase = 5;
+		alterPlayerStats(&racialBase, &racialBonus, &strength.statValue);		
+		alterPlayerStats(&racialBase, &racialBonus, &dexterity.statValue);
+		alterPlayerStats(&racialBase, &racialBonus, &constitution.statValue);
+		alterPlayerStats(&racialBase, &racialBonus, &perception.statValue);
+		alterPlayerStats(&racialBase, &racialBonus, &wisdom.statValue);
+		alterPlayerStats(&racialBase, &racialBonus, &agility.statValue);
+		alterPlayerStats(&racialBase, &racialBonus, &intelligence.statValue);
+
+		cout << "Your stats are now:\n\n";
+		playerStats(playStats, 7);
 	}
+	else if (pRace == "Orc")
+	{
+		int racialBonus = 3;
+		int racialBase = 8;
+		alterPlayerStats(&racialBase, &racialBonus, &strength.statValue);
+		alterPlayerStats(&racialBase, &racialBonus, &dexterity.statValue);
+		alterPlayerStats(&racialBase, &racialBonus, &constitution.statValue);
+		alterPlayerStats(&racialBase, &racialBonus, &perception.statValue);
+		alterPlayerStats(&racialBase, &racialBonus, &wisdom.statValue);
+		alterPlayerStats(&racialBase, &racialBonus, &agility.statValue);
+		alterPlayerStats(&racialBase, &racialBonus, &intelligence.statValue);
+
+		cout << "Your stats are now:\n\n";
+		playerStats(playStats, 7);
+	}
+	else if (pRace == "Elf")
+	{
+		int racialBonus = 5;
+		int racialBase = 6;
+		alterPlayerStats(&racialBase, &racialBonus, &strength.statValue);
+		alterPlayerStats(&racialBase, &racialBonus, &dexterity.statValue);
+		alterPlayerStats(&racialBase, &racialBonus, &constitution.statValue);
+		alterPlayerStats(&racialBase, &racialBonus, &perception.statValue);
+		alterPlayerStats(&racialBase, &racialBonus, &wisdom.statValue);
+		alterPlayerStats(&racialBase, &racialBonus, &agility.statValue);
+		alterPlayerStats(&racialBase, &racialBonus, &intelligence.statValue);
+
+		cout << "Your stats are now:\n\n";
+		playerStats(playStats, 7);
+	}
+	else if (pRace == "Dwarf")
+	{
+		int racialBonus = 3;
+		int racialBase = 5;
+		alterPlayerStats(&racialBase, &racialBonus, &strength.statValue);
+		alterPlayerStats(&racialBase, &racialBonus, &dexterity.statValue);
+		alterPlayerStats(&racialBase, &racialBonus, &constitution.statValue);
+		alterPlayerStats(&racialBase, &racialBonus, &perception.statValue);
+		alterPlayerStats(&racialBase, &racialBonus, &wisdom.statValue);
+		alterPlayerStats(&racialBase, &racialBonus, &agility.statValue);
+		alterPlayerStats(&racialBase, &racialBonus, &intelligence.statValue);
+
+		cout << "Your stats are now:\n\n";
+		playerStats(playStats, 7);
+	}	
 
 	return 0;
 }
